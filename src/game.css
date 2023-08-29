@@ -1,0 +1,119 @@
+:root {
+    --background-color: rgb(164, 248, 244);
+    --board-background-color: rgb(243, 194, 218);
+    --board-border-color: rgb(116, 5, 97);
+    --panel-background-color: rgb(243, 194, 218);
+    --panel-border-color: rgb(116, 5, 97);
+    --button-background-color: rgb(243, 194, 218);
+    --button-border-color: rgb(116, 5, 97);
+    --button-hover-color: rgb(92, 241, 209);
+}
+
+.app-container {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -400px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.panel{
+    position: absolute;
+    background-color: var(--panel-background-color);
+    border: 6px solid var(--panel-border-color);
+    -webkit-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+    box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.header{
+    left: 50%;
+    top: 40px;
+    height: 80px;
+    width: 300px;
+    margin-left: -120px;
+}
+
+.header_text{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    font-style: italic;
+    width: 280px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.footer{
+    left: 50%;
+    top: 600px;
+    height: 80px;
+    width: 300px;
+    margin-left: -120px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.footer button{
+    position: relative;
+    left: 50%;
+    top: 20%;
+    width: 150px;
+    height: 50px;
+    background-color: var(--button-background-color);
+    font-size: 20px;
+    -webkit-box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.9);
+    box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.9);
+    border: 5px solid var(--button-border-color);
+    font-weight: bold;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.footer button:hover{
+    background-color: var(--button-hover-color);
+}
+
+.gameBoard{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr); 
+        padding:20px; 
+        width:500px;
+        position: absolute;
+        left: 50%;
+        margin-left: -250px;
+        top: 15%;
+        background-color: var(--board-background-color);
+        border: 8px solid var(--board-border-color);
+        border-radius: 8%;
+        -webkit-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+        box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+}
+.gameCircle{
+        width: 75px; 
+        height: 75px; 
+        margin:10px;
+        border-radius:50%;
+        border: 4px solid black
+}
+.player_0{
+    background-color: white;
+}
+.player_1{
+    background-color: rgb(255, 0, 149);
+}
+.player_2{
+    background-color: rgb(217, 255, 0);
+}
